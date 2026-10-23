@@ -21,7 +21,8 @@ android {
 
     signingConfigs {
         getByName("debug") {
-            storeFile = rootProject.file("../.android/debug.keystore")
+            val pinned = rootProject.file("../.android/debug.keystore")
+            if (pinned.exists()) storeFile = pinned
         }
     }
 
