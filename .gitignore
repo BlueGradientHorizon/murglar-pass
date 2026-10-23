@@ -1,0 +1,17 @@
+# Gradle
+.gradle/
+build/
+
+# Android Studio / IntelliJ
+.idea/*
+!.idea/gradle.xml
+*.hprof
+captures/
+
+# Machine-specific SDK path (do NOT commit)
+local.properties
+
+# Signing keys (do NOT commit)
+*.jks
+*.keystore
+*.p12
