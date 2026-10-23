@@ -1,6 +1,6 @@
 # Murglar Pass Bypass
 
-LSPosed-модуль (libxposed API 102) для `com.badmanners.murglar2` (проверено на Murglar 6.9.325). Разблокирует весь гейт подписки: Murglar Pass, Premium, платные темы (включая AMOLED) и Pass-источники.
+LSPosed-модуль (libxposed API 102) для `com.badmanners.murglar2` (проверено на Murglar 6.9.325). Разблокирует весь гейт подписки: Murglar Pass, Premium, темы и Pass-источники.
 
 Как это работает: подписка приходит с сервера (`POST /api/user/me`, подпись RSA), поэтому модуль хукает геттеры ниже проверки подписи — `User.hasActiveSubscription/hasNoAdsPremium/getSubscriptionActiveTill`, `SignedUser.isPassLimitExceeded` и `Signature#verify` (единственное её использование в приложении — проверка профиля).
 
